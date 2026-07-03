@@ -3,9 +3,9 @@ import express from "express";
 import helmet from "helmet";
 import { createTables, initDb } from "./database/db.js";
 import { errorHandler } from "./middlewares/validation.js";
-import oeeRoutes from "./routes/oeeRoutes.js";
-import productionRoutes from "./routes/productionRoutes.js";
-import telemetryRoutes from "./routes/telemetryRoutes.js";
+import oeeRoutes from "./infrastructure/http/oeeRoutes.js";
+import productionRoutes from "./infrastructure/http/productionRoutes.js";
+import telemetryRoutes from "./infrastructure/http/telemetryRoutes.js";
 
 const PORT = process.env.PORT ?? 3001;
 
