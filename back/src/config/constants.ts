@@ -1,0 +1,11 @@
+export const TEMP_THRESHOLD = 300.0;
+export const PESO_DELTA_THRESHOLD = 0.05;
+export const ROLLING_WINDOW = 5;
+export const TAXA_BASE_KG_POR_MIN = 224 / 60;
+export const TEMPO_PLANEJADO_DIA = 1296;
+export const PARADA_PLANEJADA_DIA = 144;
+export const LIMIAR_PARADA = 30;
+export const QUALIDADE = 1.0;
+export const DROP_THRESHOLD = -50.0;
+export const WINDOW_MINUTES = 5;
+export const BAG_DROP_TOLERANCE_KG = 30.0;

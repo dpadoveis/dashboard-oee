@@ -1,0 +1,25 @@
+# Dependências
+node_modules/
+
+# Saída de build (tsc -> dist/)
+dist/
+
+# Banco de dados gerado (regenerável via `npm run seed`)
+data/*.db
+data/*.sqlite
+data/*.sqlite3
+
+# Logs
+*.log
+npm-debug.log*
+
+# Variáveis de ambiente / segredos
+.env
+.env.*
+!.env.example
+
+# Python (gerador de dados)
+__pycache__/
+*.py[cod]
+.venv/
+venv/

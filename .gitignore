@@ -1,0 +1,46 @@
+# ===== Dependências =====
+node_modules/
+**/node_modules/
+
+# ===== Saída de build =====
+dist/
+**/dist/
+dist-ssr/
+*.local
+
+# ===== Banco de dados gerado (regenerável via `npm run seed`) =====
+back/data/*.db
+back/data/*.sqlite
+back/data/*.sqlite3
+
+# ===== Logs =====
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ===== Variáveis de ambiente / segredos =====
+.env
+.env.*
+!.env.example
+
+# ===== Python (gerador de dados) =====
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# ===== Editores / SO =====
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

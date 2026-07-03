@@ -1,0 +1,86 @@
+import type { PlantData } from '../shared/types/ui';
+
+export const plantData: PlantData = {
+  name: 'PLANTA 1',
+  legend: [
+    { code: 'prod', label: 'Produção efetiva',     color: '#a3e635', pct: 64 },
+    { code: 'idle', label: 'Ocioso',               color: '#64748b', pct: 19 },
+    { code: 'stop', label: 'Parada',               color: '#ef4444', pct: 6  },
+  ],
+  reactors: [
+    {
+      id: 'R1', name: 'REATOR 1', clr: 'var(--lime)',
+      uptime: { h: 249, m: 10 },
+      gantt: [
+        { d: '01', segs: [['prod', 10], ['idle', 10]] },
+        { d: '02', segs: [['prod', 14], ['idle', 8]] },
+        { d: '03', segs: [['prod', 16], ['idle', 6]] },
+        { d: '04', segs: [['prod', 18], ['idle', 6]] },
+        { d: '05', segs: [['prod', 14], ['stop', 4]] },
+        { d: '06', segs: [['stop', 8], ['prod', 12]] },
+        { d: '07', segs: [['prod', 16], ['idle', 8]] },
+        { d: '08', segs: [['idle', 6], ['prod', 18]] },
+        { d: '09', segs: [['prod', 21]] },
+        { d: '10', segs: [['prod', 14], ['idle', 10]] },
+        { d: '11', segs: [['prod', 17], ['idle', 4]] },
+        { d: '12', segs: [['prod', 16], ['idle', 8]] },
+        { d: '13', segs: [['prod', 18], ['idle', 4]] },
+        { d: '14', segs: [['idle', 8], ['prod', 14]] },
+        { d: '15', segs: [['prod', 15], ['idle', 9]] },
+        { d: '16', segs: [['prod', 14], ['idle', 6]] },
+        { d: '17', segs: [['prod', 16], ['idle', 8]] },
+        { d: '18', segs: [['prod', 12], ['stop', 6]] },
+        { d: '19', segs: [['stop', 4], ['prod', 20]] },
+        { d: '20', segs: [['prod', 18], ['idle', 6]] },
+        { d: '21', segs: [['idle', 4], ['prod', 16]] },
+        { d: '22', segs: [['prod', 17], ['idle', 7]] },
+        { d: '23', segs: [['prod', 16], ['idle', 6]] },
+        { d: '24', segs: [['prod', 14], ['idle', 10]] },
+        { d: '25', segs: [['prod', 15], ['idle', 6]] },
+        { d: '26', segs: [['idle', 2], ['prod', 18]] },
+        { d: '27', segs: [['prod', 16], ['idle', 8]] },
+        { d: '28', segs: [['prod', 12], ['idle', 12]] },
+      ],
+    },
+    {
+      id: 'R2', name: 'REATOR 2', clr: 'var(--rust)',
+      uptime: { h: 98, m: 10 },
+      gantt: [
+        { d: '01', segs: [['prod', 8], ['idle', 6]] },
+        { d: '02', segs: [['prod', 10], ['idle', 14]] },
+        { d: '03', segs: [['prod', 6], ['idle', 18]] },
+        { d: '04', segs: [['stop', 24]] },
+        { d: '05', segs: [['stop', 24]] },
+        { d: '06', segs: [['stop', 20]] },
+        { d: '07', segs: [['idle', 24]] },
+        { d: '08', segs: [['idle', 24]] },
+        { d: '09', segs: [['idle', 24]] },
+        { d: '10', segs: [['idle', 20]] },
+        { d: '11', segs: [['idle', 24]] },
+        { d: '12', segs: [['idle', 24]] },
+        { d: '13', segs: [['stop', 24]] },
+        { d: '14', segs: [['stop', 24]] },
+        { d: '15', segs: [['stop', 24]] },
+        { d: '16', segs: [['stop', 24]] },
+        { d: '17', segs: [['stop', 24]] },
+        { d: '18', segs: [['idle', 24]] },
+        { d: '19', segs: [['idle', 24]] },
+        { d: '20', segs: [['idle', 24]] },
+        { d: '21', segs: [['idle', 24]] },
+        { d: '22', segs: [['idle', 24]] },
+        { d: '23', segs: [['idle', 24]] },
+        { d: '24', segs: [['idle', 24]] },
+        { d: '25', segs: [['idle', 24]] },
+        { d: '26', segs: [['idle', 24]] },
+        { d: '27', segs: [['idle', 24]] },
+        { d: '28', segs: [['idle', 24]] },
+      ],
+    },
+  ],
+};
+
+export const colorByCode = (c: string): string =>
+  plantData.legend.find((l) => l.code === c)?.color ?? '#334155';
+
+export const labelByCode = (c: string): string =>
+  plantData.legend.find((l) => l.code === c)?.label ?? c;
